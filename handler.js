@@ -22,11 +22,12 @@ function calcPizza(numberOfPeople) {
   return Math.ceil((numberOfPeople * SLICES_PER_PERSON) / SLICES_PER_PIZZA)
 }
 
-function pizzaData(people=0, vege=0, gf=0) {
+function pizzaData(people=0, vege=0, gf=0, lf=0) {
   const vegePizzas = calcPizza(vege);
   const gfPizzas = calcPizza(gf);
-  const additionalPizzas = calcPizza(people - vege - gf);
-  const totalPizzas = vegePizzas + gfPizzas + additionalPizzas;
+  const lfPizzas = calcPizza(lf);
+  const additionalPizzas = calcPizza(people - vege - gf - lf);
+  const totalPizzas = additionalPizzas + vegePizzas + gfPizzas + lfPizzas;
 
   return {
     "attachments": [{
