@@ -78,5 +78,5 @@ function getPizzasFromText(text) {
 
   const textArray = text.split(" ");
   const numbers = textArray.map(num => parseInt(num));
-  return pizzaData(numbers[0], numbers[1], numbers[2]);
+  return pizzaData(numbers[0], numbers[1], numbers[2], numbers[3]);
 }
